@@ -200,9 +200,11 @@ Capture these after local or production deployment:
 
 ## Live URLs
 
-- Frontend: add the Vercel deployment URL after publishing
-- Backend: add the Render service URL after publishing
-- Database: Neon or Supabase PostgreSQL connection configured through `DATABASE_URL`
+- Frontend: https://vitto-loan-portal-sigma.vercel.app
+- Backend: https://vitto-loan-portal-a7de.onrender.com
+- API Health: https://vitto-loan-portal-a7de.onrender.com/api/health
+- Database Health: https://vitto-loan-portal-a7de.onrender.com/api/health/db
+- Database: Neon PostgreSQL configured securely through `DATABASE_URL`
 
 ## Deployment
 
