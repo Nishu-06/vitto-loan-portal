@@ -16,6 +16,23 @@ app.use(cors({ origin: config.frontendUrl, credentials: true }));
 app.use(express.json({ limit: '1mb' }));
 app.use(requestLogger);
 
+app.get('/', (_req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Vitto Loan Portal API is running',
+    version: '1.0.0',
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/health', (_req, res) => {
+  res.status(200).json({
+    status: 'healthy',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.get('/api/health', (_req, res) => {
   res.status(200).json({ success: true, message: 'Vitto API is healthy.' });
 });
